@@ -1,7 +1,3 @@
-[**English**](./README.md) | [**中文**](./README_zh.md)
+指令微调代码在`./sft`目录下。
 
-the pretrain code is in the `./pretrain` dir.
-
-the sft code is in the `./sft` dir.
-
-You can use `export_lora_model.sh` to merge lora weight.
+可以使用`export_lora_model.sh`文件去合并lora权重。

@@ -1,4 +1,4 @@
-# Hallucination-Suppression-Framework
+# 幻觉抑制方法
 本仓库是《**基于大模型微调的出院小结生成幻觉抑制方法**》的官方实现
 
 
@@ -51,11 +51,10 @@ bash 2_start_pretrain.sh
 # 前往相关目录
 cd /train/LLaMA-Factory/ours-script/sft
 
-# 获得stage1到stage4的数据集缓存
+# 获得3个阶段的数据集缓存
 bash 1_chatglm_cache_stage1.sh
 bash 1_chatglm_cache_stage2.sh
 bash 1_chatglm_cache_stage3.sh
-bash 1_chatglm_cache_stage4.sh
 
 # 开始迭代式指令微调
 bash 2_chatglm_train_stage1_lora.sh
@@ -65,9 +64,6 @@ bash 2_chatglm_train_stage2_lora.sh
 # 修改配置
 bash /train/LLaMA-Factory/ours-script/export_lora_model.sh
 bash 2_chatglm_train_stage3_lora.sh
-# 修改配置
-bash /train/LLaMA-Factory/ours-script/export_lora_model.sh
-bash 2_chatglm_train_stage4_lora.sh
 # 修改配置
 bash /train/LLaMA-Factory/ours-script/export_lora_model.sh
 ```
